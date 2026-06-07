@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "qdrant": {
+      "command": "uvx",
+      "args": ["mcp-server-qdrant"],
+      "env": {
+        "QDRANT_LOCAL_PATH": "./qdrant_data",
+        "COLLECTION_NAME": "recipes",
+        "EMBEDDING_MODEL": "sentence-transformers/all-MiniLM-L6-v2",
+        "TOOL_STORE_DESCRIPTION": "Хранилище рецептов с поваренок.ру. Используй для поиска рецептов, ингредиентов и способов приготовления.",
+        "QDRANT_SEARCH_LIMIT": "5"
+      }
+    }
+  }
+}
