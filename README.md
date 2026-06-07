@@ -1,4 +1,26 @@
-# гайд на запуск:
+# быстрый гайд на запуск:
+
+```
+git clone https://github.com/daniinco/hw_rag_mcp.git
+cd hw_rag_mcp 
+добавить povarenok.csv в файл - скачать тут https://github.com/ashaba1in/hse-nlp/blob/2025/homeworks/hw5_rag/povarenok.csv
+сделать окружение, у меня так:
+/opt/homebrew/bin/python3.12 -m venv .venv
+
+source .venv/bin/activate
+pip install -r requirements.txt
+
+дальше уже запуски
+python ingest.py
+python search_demo.py
+
+ollama pull qwen2.5:7b # у меня уже такой скачан, можно другой
+ollama serve
+
+python agent_demo.py
+
+python eval_runner.py
+```
 
 
 
@@ -101,7 +123,7 @@ Top-k: 3
 # Демонстрация агента
 
 ```
-ollama pull qwen2.5:7b
+ollama pull qwen2.5:7b # у меня уже такой скачан, можно другой
 ollama serve  # если не запущен
 
 .venv/bin/python agent_demo.py 2>/dev/null
